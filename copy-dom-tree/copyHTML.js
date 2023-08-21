@@ -3,11 +3,11 @@
 	function startDownload(){
 		if(document.getSelection().anchorNode == null)return;
 		const anchorNode = document.getSelection().anchorNode;
-		let selkectedEl = 
+		let selectedEl = 
 			anchorNode.nodeType != 1
 				? document.getSelection().anchorNode.parentElement.parentElement
 				: document.getSelection().anchorNode.parentElement;
-		const html = selkectedEl.outerHTML;
+		const html = selectedEl.outerHTML;
 		
 		navigator.clipboard.writeText(html);
 	}
